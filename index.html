@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Filtering</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Student Details</h1>
+
+    <div id="filter-options">
+    
+        <div class="filter-line">
+            <label for="subject">Select Subject:</label>
+            <select id="subject">
+                <option value="" selected disabled>Select a subject</option>
+                <option value="English">English</option>
+                <option value="Maths">Maths</option>
+                <option value="Science">Science</option>
+                <option value="SocialScience">Social Science</option>
+            </select>
+        </div>
+
+        
+        <div class="filter-line">
+            <label>
+                <input type="radio" name="filter" value="above"> Above
+            </label>
+            <label>
+                <input type="radio" name="filter" value="below"> Below
+            </label>
+            <label>
+                <input type="radio" name="filter" value="between"> Between
+            </label>
+        </div>
+
+    
+        <div class="filter-line" id="filter-values">
+            <label for="filterValue1">Value 1:</label>
+            <input type="number" id="filterValue1" placeholder="Enter first value">
+
+            <label for="filterValue2">Value 2:</label>
+            <input type="number" id="filterValue2" placeholder="Enter second value">
+        </div>
+
+        
+        <div class="filter-line">
+            <button id="applyFilter">Apply Filter</button>
+            <button id="clearFilter">Clear Filter</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="sortable" data-column="id">#</th>
+                <th class="sortable" data-column="name">Name</th>
+                <th class="sortable" data-column="English">English</th>
+                <th class="sortable" data-column="Maths">Maths</th>
+                <th class="sortable" data-column="Science">Science</th>
+                <th class="sortable" data-column="SocialScience">Social Science</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
